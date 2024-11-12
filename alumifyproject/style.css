@@ -1,0 +1,466 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Navbar */
+.top-navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.top-navbar .location,
+.top-navbar .contact-info,
+.top-navbar .email-info {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.top-navbar .separator {
+    color: #888888;
+}
+
+.top-navbar .icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.top-navbar .icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Second Navbar */
+.second-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+}
+
+.auth-links {
+    font-family: 'Roboto condensed', cursive;
+    font-size: 20px;
+    color: #030303;
+}
+
+.auth-links a {
+    color: hsl(0, 9%, 2%);
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 0 10px;
+}
+
+.auth-links .separator {
+    color: white;
+    padding: 0 8px;
+}
+
+.auth-links a:hover {
+    color: #ff4081;
+}
+
+/* Main Navbar */
+.main-navbar {
+    background-color: #fefdfd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Ensure logo color is consistent */
+.main-navbar .logo {
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 42px;
+    color: hsl(0, 17%, 2%); /* Red color */
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 5px hwb(120 98% 2%);
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the logo */
+.main-navbar .logo:hover {
+    color: hsl(0, 9%, 2%); /* Dark color on hover */
+}
+
+
+/* Ensure logo font is consistently applied across pages */
+body .main-navbar .logo {
+    font-family: 'Rubik Wet Paint', cursive;
+}
+
+
+/* Bottom Navbar */
+.bottom-navbar {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.bottom-navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 15px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.bottom-navbar a:hover {
+    background-color: #444;
+}
+
+/* Dropdown Menus */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Background Image Section for Home Page */
+.background-image {
+    background-image: url('images/WhatsApp Image 2024-11-07 at 15.13.04_804c8108.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Text Styling */
+.background-text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* About Section Background Image */
+.about-content .background-image {
+    background-image: url('images/pexels-sena-kazak-324306535-13754032.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 850px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(145, 142, 142);
+    text-align: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Transparent Black Overlay for Paragraph Background */
+.about-content .background-text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.7); /* Light transparent black */
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    max-width: 80%;  /* Reduce width to leave some space on the sides */
+    margin: 20px auto;  /* Adjust margin for better spacing */
+    text-align: left; /* Align text to the left for readability */
+    box-sizing: border-box;
+    z-index: 10; /* Ensure the text is on top */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds some shadow for better contrast */
+}
+
+/* Optional: Add padding to the section to give it breathing space */
+.about-content {
+    padding: 40px 20px;  /* Adjust as needed */
+}
+
+
+/* Ensure paragraph spacing */
+.about-content .background-text p {
+    margin-bottom: 20px; /* Spacing between paragraphs */
+}
+
+/* Adjust font sizes for better readability on smaller screens */
+@media (max-width: 770px) {
+    .about-content .background-text {
+        font-size: 19px;
+        padding: 40px;
+    }
+
+    .about-content .background-text p {
+        margin-bottom: 15px; /* Adjust spacing for smaller screens */
+    }
+}
+
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: hsla(120, 38%, 3%, 0.82);
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-item .icon {
+    width: 30px;
+    height: 30px;
+}
+
+.social-item:hover {
+    color: hwb(0 6% 1%); /* Default hover color */
+}
+
+/* Social Media Specific Colors */
+.social-item:nth-child(1) .icon { /* Facebook */
+    filter: none; /* Remove filter to keep the original icon color */
+}
+
+.social-item:nth-child(2) .icon { /* Twitter */
+    filter: none; /* Remove filter to keep the original icon color */
+}
+
+.social-item:nth-child(3) .icon { /* WhatsApp */
+    filter: none; /* Remove filter to keep the original icon color */
+}
+
+.social-item:hover .icon {
+    filter: brightness(1.2); /* Slightly brightens the icon on hover */
+}
+
+/* App Store & Google Play Button Styling */
+.download-buttons {
+    display: flex;
+    justify-content: space-around; /* Space out the buttons */
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background-color: hsl(0, 10%, 6%); /* White background for the button */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 250px;
+}
+
+.download-button:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.download-button img {
+    width: 40px; /* Adjust size of the image */
+    margin-right: 10px;
+}
+
+.download-button p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fdfafa; /* Dark text color */
+    margin: 0;
+}
+
+
+/* Form Container */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #dad9d9;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #444;
+}
+
+/* Success Message Styling */
+.success-message {
+    color: green;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Profile Section Styling */
+#profileSection {
+    display: none;
+    align-items: center;
+    background-color: #070303;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: 'Rubik Wet Paint', sans-serif;
+}
+
+#profileSection:hover {
+    background-color: hsl(0, 15%, 6%);
+}
+
+#profileIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+#profileName {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .download-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+}
